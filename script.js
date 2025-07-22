@@ -1,6 +1,5 @@
 
-const apiKey = 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
-
+const apiKey = "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";
 async function sendMessage() {
     const input = document.getElementById("user-input");
     const chatBox = document.getElementById("chat-box");
