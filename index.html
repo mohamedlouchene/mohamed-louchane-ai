@@ -1,58 +1,81 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <title>محمد لوشان - مساعد البيام</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>مساعد شهادة التعليم المتوسط - محمد لوشان</title>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
-      background: #f2f5fa;
-      padding: 40px;
-      color: #333;
+      font-family: 'Tajawal', sans-serif;
+      background: linear-gradient(to right, #667eea, #764ba2);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
       text-align: center;
     }
+
     h1 {
-      color: #007bff;
+      font-size: 2.5em;
+      margin-bottom: 10px;
     }
+
+    p {
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
+
     input, button {
-      padding: 12px;
-      margin: 10px;
+      padding: 10px;
+      margin: 5px;
+      border: none;
       border-radius: 8px;
-      border: 1px solid #ccc;
-      width: 80%;
-      max-width: 500px;
+      font-size: 1em;
     }
+
+    input {
+      width: 300px;
+      max-width: 90%;
+    }
+
     button {
-      background-color: #28a745;
+      background-color: #00c9a7;
       color: white;
       cursor: pointer;
     }
+
     #response {
       margin-top: 20px;
-      white-space: pre-wrap;
-      background: #fff;
-      padding: 20px;
+      padding: 15px;
+      background-color: rgba(0,0,0,0.2);
       border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
+      white-space: pre-wrap;
     }
+
     footer {
-      margin-top: 30px;
-      font-size: 14px;
-      color: #666;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #dcdcdc;
     }
   </style>
 </head>
 <body>
-  <h1>👋 مرحبًا بك في موقع محمد لوشان!</h1>
-  <p>مساعدك الذكي للتحضير لشهادة التعليم المتوسط (البيام) 🎓</p>
-  <input id="user-input" placeholder="اكتب سؤالك عن البيام...">
-  <br>
-  <button id="ask-button">أرسل</button>
+  <h1>🎓 مساعد البيام الذكي</h1>
+  <p>مرحبًا! أنا مساعدك الذكي 🧠 من تصميم <strong>محمد لوشان</strong> (15 سنة من الجزائر)، هنا لمساعدتك على التحضير لشهادة التعليم المتوسط (BEM). أسألني عن أي شيء متعلق بالبيام، وسأساعدك بإجابات مفهومة وبأسلوب شبابي ممزوج بالرسمية.</p>
+
+  <input type="text" id="user-input" placeholder="اكتب سؤالك هنا..."/>
+  <button id="ask-button">إرسال</button>
+
   <div id="response"></div>
-  <footer>🚀 من تصميم محمد لوشان - Powered by OpenAI</footer>
+
+  <footer>
+    ⚡ من تصميم محمد لوشان | Powered by ChatGPT API | لا تولّد صور أو أكواد، فقط مساعد للبيام 💼
+  </footer>
 
   <script src="script.js"></script>
 </body>
