@@ -1,7 +1,4 @@
-
-const apiKey = "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";
-
-// دالة إرسال السؤال واستلام الجواب
+const apiKey = "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"
 async function sendMessage(userInput) {
   const response = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
@@ -10,11 +7,11 @@ async function sendMessage(userInput) {
       "Authorization": `Bearer ${apiKey}`
     },
     body: JSON.stringify({
-      model: "gpt-3.5-turbo", // يمكنك تغيير الموديل إذا أردت
+      model: "gpt-3.5-turbo",
       messages: [
         {
           role: "system",
-          content: "أنت مساعد دراسي شبابي بأسلوب رسمي بسيط، موجه لتلاميذ شهادة التعليم المتوسط في الجزائر، وتقدم شروحات وتمارين ونصائح تخص البيام فقط. لا تخرج عن هذا المجال."
+          content: "أنت مساعد شبابي رسمي لتلاميذ البيام في الجزائر، أجب فقط على الأسئلة المتعلقة بالبيام ولا تتحدث في مواضيع خارجة."
         },
         {
           role: "user",
@@ -35,7 +32,6 @@ async function sendMessage(userInput) {
   }
 }
 
-// زر الإرسال
 document.getElementById("ask-button").addEventListener("click", async () => {
   const userInput = document.getElementById("user-input").value;
   if (!userInput.trim()) return;
