@@ -1,4 +1,4 @@
-const apiKey = "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"
+const apiKey = "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"
 async function sendMessage(userInput) {
   const response = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
